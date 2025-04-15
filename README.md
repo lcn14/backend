@@ -37,7 +37,7 @@ backend/
 ---
 
 ## 🔷 Gitflow y Commits
-```markdown
+
 
 
 🌿 Estrategia de Ramas (Gitflow)
@@ -49,11 +49,10 @@ backend/
 | `feature/*`   | Desarrollo de nuevas funcionalidades      |
 | `hotfix/*`    | Correcciones urgentes en producción       |
 | `release/*`   | Preparación para nuevas versiones         |
-```
+
 
 ## 💡 Convención de Commits
 
-```bash
 
 | Emoji | Tipo       | Descripción                           |
 |-------|------------|---------------------------------------|
@@ -65,19 +64,18 @@ backend/
 | 🎨    | `style`    | Formato de código                     |
 | 🔧    | `chore`    | Tareas de mantenimiento               |
 
-```
 
 ---
 
 ## 🔷 Requisitos e Instalación
-```markdown
+
 
 🛠️ Requisitos
 
 - Java JDK 17+
 - MySQL 8+
 - Maven 3.6+
-```
+
 ---
 
 ## 🔧 Instalación
