@@ -104,4 +104,6 @@ mvn spring-boot:run
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+Ver [LICENSE](LICENSE) para el texto completo de la licencia.
+
