@@ -25,3 +25,29 @@ backend/
 │   │   └── resources/       # Configuración: application.yml, etc.
 ├── docs/                    # Documentación técnica del proyecto
 └── README.md                # Este archivo
+
+
+🌱 **Gestión de Ramas (Gitflow)**
+
+Usaremos el modelo **Gitflow** para organizarnos:
+
+- **main**: Rama principal, contiene el código en producción.
+- **develop**: Rama de integración, aquí se mezclan las features.
+- **feature/nombre**: Cada funcionalidad nueva se trabaja en su propia rama.
+- **hotfix/nombre**: Correcciones urgentes sobre main.
+- **release/nombre**: Preparación para una nueva versión.
+
+---
+
+🧠 **Convenciones para commits**
+
+Usaremos esta convención para los mensajes de commit:
+
+- **feat**: para nuevas funcionalidades.
+- **fix**: para correcciones.
+- **docs**: para documentación.
+- **refactor**: para mejoras internas.
+- **test**: para pruebas.
+- **chore**: tareas menores (formato, build, etc.).
+
+
