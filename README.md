@@ -29,15 +29,14 @@ backend/
 │   │   │   ├── services/       # Lógica de negocio
 │   │   │   └── exceptions/     # Manejo de errores
 │   │   └── resources/
-│   │       ├── application.yml # Configuración
-│   │       └── data.sql        # Datos iniciales
+│   │       ├── application.properties # Configuración
 ├── docs/
 └── pom.xml             # Dependencias Maven
 ```
 
 ---
 
-### 🔷 Gitflow y Commits
+## 🔷 Gitflow y Commits
 ```markdown
 
 
@@ -70,7 +69,7 @@ backend/
 
 ---
 
-### 🔷 Requisitos e Instalación
+## 🔷 Requisitos e Instalación
 ```markdown
 
 🛠️ Requisitos
@@ -89,15 +88,14 @@ git clone https://github.com/AuraFTG/backend.git
 ```
 2. 🔧 **Configuración de la Base de Datos**
 
-Configura el archivo `src/main/resources/application.yml` con:
+Configura el archivo `src/main/resources/application.properties` con:
 
-```yaml
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/aura_db
-    username: usuario
-    password: contraseña
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/aura_db
+spring.datasource.username=usuario
+spring.datasource.password=contraseña
 ```
+
 3. **Ejecutar aplicación**:
 ```bash
 mvn spring-boot:run
