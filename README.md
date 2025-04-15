@@ -3,51 +3,110 @@ Este proyecto representa el backend del sistema de gestión de citas, pacientes 
 
 ---
 
-## 📌 Tecnologías Seleccionadas
+## 🚀 Tecnologías
 
-| Elemento          | Tecnología         | Justificación Breve |
-|-------------------|--------------------|----------------------|
-| Lenguaje          | Java               | Familiaridad del equipo, fuerte en backend |
-| Framework         | Spring Boot        | Facilita la creación de APIs REST |
-| Base de Datos     | MySQL              | Conocimiento previo del equipo, relacional |
-| Control de Versiones | Git + GitHub    | Trabajo en equipo, historial claro |
-| Gestión de ramas  | Gitflow            | Organización y colaboración efectiva |
+| Componente        | Tecnología    | Justificación                          |
+|-------------------|--------------|----------------------------------------|
+| Lenguaje          | Java 17      | Familiaridad del equipo, robustez      |
+| Framework         | Spring Boot  | Desarrollo rápido de APIs REST         |
+| Base de Datos     | MySQL 8      | Relacional, conocimiento del equipo    |
+| Autenticación     | JWT          | Seguridad para APIs                    |
+| Control de Versiones | Git/GitHub | Colaboración eficiente                |
 
 ---
 
-## 🧱 Estructura Base del Proyecto
+## 📁 Estructura del Proyecto
 
 ```bash
 backend/
 ├── src/
 │   ├── main/
-│   │   ├── java/            # Código Java (controladores, servicios, etc.)
-│   │   └── resources/       # Configuración: application.yml, etc.
-├── docs/                    # Documentación técnica del proyecto
-└── README.md                # Este archivo
+│   │   ├── java/
+│   │   │   ├── config/         # Configuraciones
+│   │   │   ├── controllers/    # Controladores REST
+│   │   │   ├── models/         # Entidades
+│   │   │   ├── repositories/   # Acceso a datos
+│   │   │   ├── services/       # Lógica de negocio
+│   │   │   └── exceptions/     # Manejo de errores
+│   │   └── resources/
+│   │       ├── application.yml # Configuración
+│   │       └── data.sql        # Datos iniciales
+├── docs/
+└── pom.xml             # Dependencias Maven
 
-
-🌱 **Gestión de Ramas (Gitflow)**
-
-Usaremos el modelo **Gitflow** para organizarnos:
-
-- **main**: Rama principal, contiene el código en producción.
-- **develop**: Rama de integración, aquí se mezclan las features.
-- **feature/nombre**: Cada funcionalidad nueva se trabaja en su propia rama.
-- **hotfix/nombre**: Correcciones urgentes sobre main.
-- **release/nombre**: Preparación para una nueva versión.
 
 ---
 
-🧠 **Convenciones para commits**
+### 🔷 **Gitflow y Commits**
+```markdown
+---
 
-Usaremos esta convención para los mensajes de commit:
+## 🌿 Estrategia de Ramas (Gitflow)
 
-- **feat**: para nuevas funcionalidades.
-- **fix**: para correcciones.
-- **docs**: para documentación.
-- **refactor**: para mejoras internas.
-- **test**: para pruebas.
-- **chore**: tareas menores (formato, build, etc.).
+| Rama          | Propósito                                 |
+|---------------|-------------------------------------------|
+| `main`        | Código en producción (estable)            |
+| `develop`     | Integración de features                   |
+| `feature/*`   | Desarrollo de nuevas funcionalidades      |
+| `hotfix/*`    | Correcciones urgentes en producción       |
+| `release/*`   | Preparación para nuevas versiones         |
+
+---
+
+## 💡 Convención de Commits
+
+```bash
+<emoji> <tipo>[ámbito(opcional)]: <descripción> [Issue/#]
+
+| Emoji | Tipo       | Descripción                           |
+|-------|------------|---------------------------------------|
+| ✨    | `feat`     | Nueva funcionalidad                   |
+| 🐛    | `fix`      | Corrección de errores                 |
+| 📚    | `docs`     | Cambios en documentación              |
+| ♻️    | `refactor` | Reestructuración de código            |
+| 🧪    | `test`     | Pruebas unitarias/integración         |
+| 🎨    | `style`    | Formato de código                     |
+| 🔧    | `chore`    | Tareas de mantenimiento               |
 
 
+
+---
+
+### 🔷 **Requisitos e Instalación**
+```markdown
+---
+
+## 🛠️ Requisitos
+
+- Java JDK 17+
+- MySQL 8+
+- Maven 3.6+
+
+---
+
+## 🔧 Instalación
+
+1. **Clonar repositorio**:
+```bash
+git clone https://github.com/tu-usuario/aura-backend.git
+
+## 🔧 Configuración de la Base de Datos
+
+2. **Configura el archivo `src/main/resources/application.yml` con**:
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/aura_db
+    username: usuario
+    password: contraseña
+
+3. **Ejecutar aplicación**:
+```bash
+mvn spring-boot:run
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
