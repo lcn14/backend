@@ -33,15 +33,15 @@ backend/
 │   │       └── data.sql        # Datos iniciales
 ├── docs/
 └── pom.xml             # Dependencias Maven
-
+```
 
 ---
 
-### 🔷 **Gitflow y Commits**
+### 🔷 Gitflow y Commits
 ```markdown
----
 
-## 🌿 Estrategia de Ramas (Gitflow)
+
+🌿 Estrategia de Ramas (Gitflow)
 
 | Rama          | Propósito                                 |
 |---------------|-------------------------------------------|
@@ -50,13 +50,11 @@ backend/
 | `feature/*`   | Desarrollo de nuevas funcionalidades      |
 | `hotfix/*`    | Correcciones urgentes en producción       |
 | `release/*`   | Preparación para nuevas versiones         |
-
----
+```
 
 ## 💡 Convención de Commits
 
 ```bash
-<emoji> <tipo>[ámbito(opcional)]: <descripción> [Issue/#]
 
 | Emoji | Tipo       | Descripción                           |
 |-------|------------|---------------------------------------|
@@ -68,31 +66,30 @@ backend/
 | 🎨    | `style`    | Formato de código                     |
 | 🔧    | `chore`    | Tareas de mantenimiento               |
 
-
+```
 
 ---
 
-### 🔷 **Requisitos e Instalación**
+### 🔷 Requisitos e Instalación
 ```markdown
----
 
-## 🛠️ Requisitos
+🛠️ Requisitos
 
 - Java JDK 17+
 - MySQL 8+
 - Maven 3.6+
-
+```
 ---
 
 ## 🔧 Instalación
 
 1. **Clonar repositorio**:
 ```bash
-git clone https://github.com/tu-usuario/aura-backend.git
+git clone https://github.com/AuraFTG/backend.git
+```
+2. 🔧 **Configuración de la Base de Datos**
 
-## 🔧 Configuración de la Base de Datos
-
-2. **Configura el archivo `src/main/resources/application.yml` con**:
+Configura el archivo `src/main/resources/application.yml` con:
 
 ```yaml
 spring:
@@ -100,11 +97,11 @@ spring:
     url: jdbc:mysql://localhost:3306/aura_db
     username: usuario
     password: contraseña
-
+```
 3. **Ejecutar aplicación**:
 ```bash
 mvn spring-boot:run
-
+```
 ---
 
 ## 📄 Licencia
