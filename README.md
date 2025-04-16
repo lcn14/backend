@@ -13,6 +13,7 @@ Este proyecto representa el backend del sistema de gestión de citas, pacientes 
 | Base de Datos     | MySQL 8      | Relacional, conocimiento del equipo    |
 | Autenticación     | JWT          | Seguridad para APIs                    |
 | Control de Versiones | Git/GitHub | Colaboración eficiente                |
+| Documentar API    | Swagger      | permite documentar y probar de forma interactiva la API|
 
 ---
 
