@@ -4,7 +4,7 @@ Este proyecto representa el backend del sistema de gestión de citas, pacientes 
 
 ---
 
-## 🚀 Tecnologías
+## 🚀 Tecnologías 
 
 | Componente        | Tecnología    | Justificación                          |
 |-------------------|--------------|----------------------------------------|
