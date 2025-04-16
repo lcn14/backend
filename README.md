@@ -1,3 +1,4 @@
+
 # 🩺 Backend - Sistema de Gestión Clínica AURA
 Este proyecto representa el backend del sistema de gestión de citas, pacientes y servicios de una clínica de terapias.
 
