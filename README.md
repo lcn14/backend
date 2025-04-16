@@ -12,7 +12,7 @@ Este proyecto representa el backend del sistema de gestión de citas, pacientes 
 | Framework         | Spring Boot  | Desarrollo rápido de APIs REST         |
 | Base de Datos     | MySQL 8      | Relacional, conocimiento del equipo    |
 | Autenticación     | JWT          | Seguridad para APIs                    |
-| Control de Versiones | Git/GitHub | Colaboración eficiente                |
+| Control de Versiones | Git/GitHub | Colaboración eficiente               |
 
 ---
 
