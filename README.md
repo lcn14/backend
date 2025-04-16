@@ -1,9 +1,10 @@
+
 # 🩺 Backend - Sistema de Gestión Clínica AURA
 Este proyecto representa el backend del sistema de gestión de citas, pacientes y servicios de una clínica de terapias.
 
 ---
 
-## 🚀 Tecnologías
+## 🚀 Tecnologías 
 
 | Componente        | Tecnología    | Justificación                          |
 |-------------------|--------------|----------------------------------------|
@@ -12,6 +13,7 @@ Este proyecto representa el backend del sistema de gestión de citas, pacientes 
 | Base de Datos     | MySQL 8      | Relacional, conocimiento del equipo    |
 | Autenticación     | JWT          | Seguridad para APIs                    |
 | Control de Versiones | Git/GitHub | Colaboración eficiente                |
+| Documentar API    | Swagger      | permite documentar y probar de forma interactiva la API|
 
 ---
 
@@ -29,19 +31,18 @@ backend/
 │   │   │   ├── services/       # Lógica de negocio
 │   │   │   └── exceptions/     # Manejo de errores
 │   │   └── resources/
-│   │       ├── application.yml # Configuración
-│   │       └── data.sql        # Datos iniciales
+│   │       ├── application.properties # Configuración
 ├── docs/
 └── pom.xml             # Dependencias Maven
-
+```
 
 ---
 
-### 🔷 **Gitflow y Commits**
-```markdown
----
+## 🔷 Gitflow y Commits
 
-## 🌿 Estrategia de Ramas (Gitflow)
+
+
+🌿 Estrategia de Ramas (Gitflow)
 
 | Rama          | Propósito                                 |
 |---------------|-------------------------------------------|
@@ -51,12 +52,9 @@ backend/
 | `hotfix/*`    | Correcciones urgentes en producción       |
 | `release/*`   | Preparación para nuevas versiones         |
 
----
 
 ## 💡 Convención de Commits
 
-```bash
-<emoji> <tipo>[ámbito(opcional)]: <descripción> [Issue/#]
 
 | Emoji | Tipo       | Descripción                           |
 |-------|------------|---------------------------------------|
@@ -69,14 +67,12 @@ backend/
 | 🔧    | `chore`    | Tareas de mantenimiento               |
 
 
-
 ---
 
-### 🔷 **Requisitos e Instalación**
-```markdown
----
+## 🔷 Requisitos e Instalación
 
-## 🛠️ Requisitos
+
+🛠️ Requisitos
 
 - Java JDK 17+
 - MySQL 8+
@@ -88,25 +84,26 @@ backend/
 
 1. **Clonar repositorio**:
 ```bash
-git clone https://github.com/tu-usuario/aura-backend.git
+git clone https://github.com/AuraFTG/backend.git
+```
+2. 🔧 **Configuración de la Base de Datos**
 
-## 🔧 Configuración de la Base de Datos
+Configura el archivo `src/main/resources/application.properties` con:
 
-2. **Configura el archivo `src/main/resources/application.yml` con**:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/aura_db
-    username: usuario
-    password: contraseña
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/aura_db
+spring.datasource.username=usuario
+spring.datasource.password=contraseña
+```
 
 3. **Ejecutar aplicación**:
 ```bash
 mvn spring-boot:run
-
+```
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+Ver [LICENSE](LICENSE) para el texto completo de la licencia.
+
