@@ -1,6 +1,9 @@
 package com.clinica.aura.entities.user_account.controller;
 
+import com.clinica.aura.entities.patient.dtoRequest.PatientRequestDto;
+import com.clinica.aura.entities.patient.service.PatientService;
 import com.clinica.aura.entities.professional.dtoRequest.ProfessionalRequestDto;
+import com.clinica.aura.entities.professional.service.ProfessionalService;
 import com.clinica.aura.entities.user_account.dtoRequest.AuthLoginRequestDto;
 import com.clinica.aura.entities.user_account.dtoResponse.AuthResponseDto;
 import com.clinica.aura.entities.user_account.dtoResponse.AuthResponseRegisterDto;
@@ -25,16 +28,18 @@ import org.springframework.web.bind.annotation.RestController;
 @Validated
 @RequiredArgsConstructor
 public class AuthController {
-    private final UserDetailsServiceImpl userDetailsServiceImpl;
+    private final ProfessionalService professionalService;
+    private final UserDetailsServiceImpl userDetailsService;
+    private final PatientService patientService;
 
     @Operation(summary = "Iniciar sesión", description = "Inicia sesión y obtiene un token de autenticación." +
-            "Por defecto ya se encuentra registrado un ADMIN con credenciales de login: " +
+            " Por defecto ya se encuentra registrado un ADMIN con credenciales de login: " +
             "email: admin@example.com, password: admin123")
     @ApiResponse(responseCode = "200", description = "Autenticación exitosa")
     @ApiResponse(responseCode = "401", description = "Credenciales incorrectas")
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDto> login(@RequestBody @Valid AuthLoginRequestDto authDto) {
-        AuthResponseDto response = this.userDetailsServiceImpl.loginUser(authDto);
+        AuthResponseDto response = this.userDetailsService.loginUser(authDto);
 
         return ResponseEntity.ok()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + response.getToken())
@@ -46,8 +51,17 @@ public class AuthController {
             Registra un nuevo profesional y obtiene un token de autenticación.
             """)
     @PostMapping(value = "/professional/register")
-    public ResponseEntity<AuthResponseRegisterDto> register(@RequestBody @Valid ProfessionalRequestDto authCreateUserDto) {
-        AuthResponseRegisterDto response = userDetailsServiceImpl.createUser(authCreateUserDto);
+    public ResponseEntity<AuthResponseRegisterDto> registerProfessional(@RequestBody @Valid ProfessionalRequestDto authCreateUserDto) {
+        AuthResponseRegisterDto response = professionalService.createUser(authCreateUserDto);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @Operation(summary = "Registrar nuevo paciente", description = """
+            Registra un nuevo paciente y obtiene un token de autenticación.
+            """)
+    @PostMapping(value = "/patient/register")
+    public ResponseEntity<AuthResponseRegisterDto> registerPatient(@RequestBody @Valid PatientRequestDto authCreateUserDto) {
+        AuthResponseRegisterDto response = patientService.createUser(authCreateUserDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }

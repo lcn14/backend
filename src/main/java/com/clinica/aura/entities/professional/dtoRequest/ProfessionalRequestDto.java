@@ -1,6 +1,7 @@
 package com.clinica.aura.entities.professional.dtoRequest;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 public class ProfessionalRequestDto {
     @NotBlank(message = "El email es obligatorio")
     @Schema(description = "Correo del usuario", requiredMode = Schema.RequiredMode.REQUIRED, example = "admin1@example.com")
+    @Email
     private String email;
 
     @NotBlank(message = "La contraseña es obligatoria")
